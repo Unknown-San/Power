@@ -3,7 +3,6 @@ import os
 import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
-
 from SaitamaRobot import telethn as borg
 from SaitamaRobot import telethn as bot
 from SaitamaRobot.events import register
