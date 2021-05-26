@@ -6,9 +6,8 @@ from PIL import Image, ImageDraw, ImageFont
 from SaitamaRobot import telethn as borg
 from SaitamaRobot import telethn as bot
 from SaitamaRobot.events import register
-from SaitamaRobot import LOGGER
+from SaitamaRobot import LOGGER,TEMP_DOWNLOAD_DIRECTORY
 
-TEMP_DOWNLOAD_DIRECTORY ="/"
     
     
 
