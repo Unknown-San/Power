@@ -40,5 +40,7 @@ pyrogram
 tgCrypto>=1.2.2
 motor
 pymongo 
-python-arq
+gpytranslate
 dnspython 
+python-arq
+aiofiles
