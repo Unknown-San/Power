@@ -275,6 +275,9 @@ def meme(update: Update, context: CallbackContext):
 
 
 
+__mod_name__ = "fun"
+
+
 __help__ = """
  • `/runs`*:* reply a random string from an array of replies
  • `/slap`*:* slap a user, or get slapped if not a reply
