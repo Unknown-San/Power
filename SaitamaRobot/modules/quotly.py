@@ -3,9 +3,8 @@ from traceback import format_exc
 
 from pyrogram import filters
 from pyrogram.types import Message
-from SaitamaRobot import pbot as app,arq
-
-
+from SaitamaRobot import pbot as app
+from SaitamaRobot import arq
 
 async def quotify(messages: list):
     response = await arq.quotly(messages)
