@@ -6,6 +6,7 @@ from pyrogram.types import Message
 from SaitamaRobot import pbot as app
 from SaitamaRobot import arq
 
+
 async def quotify(messages: list):
     response = await arq.quotly(messages)
     if not response.ok:
@@ -31,11 +32,12 @@ def isArgInt(message: Message) -> bool:
 
 
 
-
 @app.on_message(filters.command("q"))
 async def quotly_func(client, message: Message):
     if not message.reply_to_message:
-        return await message.reply_text("Reply to a message to quote it.")
+        return await message.reply_text(
+            "Reply to a message to quote it."
+        )
     if not message.reply_to_message.text:
         return await message.reply_text(
             "Replied message has no text, can't quote it."
@@ -87,11 +89,10 @@ async def quotly_func(client, message: Message):
         await m.delete()
         sticker.close()
     except Exception as e:
-        await message.reply_text(
+        await m.edit(
             "Something wrong happened while quoting messages,"
             + " This error usually happens when there's a "
             + " message containing something other than text."
         )
-        await m.delete()
         e = format_exc()
         print(e)
