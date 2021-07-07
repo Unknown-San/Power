@@ -8,7 +8,7 @@ import telegram.ext as tg
 from telethon import TelegramClient
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from Python_ARQ import ARQ
-
+from aiohttp import ClientSession
 StartTime = time.time()
 
 # enable logging
@@ -86,7 +86,7 @@ if ENV:
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     CASH_API_KEY = os.environ.get('CASH_API_KEY', None)
     TIME_API_KEY = os.environ.get('TIME_API_KEY', None)
-    AI_API_KEY = os.environ.get('AI_API_KEY', None)
+    AI_API_KEY = os.environ.get('AI_API_KEY','WPPFYH-AJPNQK-UKKELO-BYZBCX-ARQ')
     WALL_API = os.environ.get('WALL_API', None)
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     ARQ_API = os.environ.get("ARQ_API_BASE_URL", None)
@@ -186,7 +186,8 @@ telethn = TelegramClient("saitama", API_ID, API_HASH)
 pbot = Client("KurisuPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.SaitamaRobot
-arq = ARQ(ARQ_API)
+aiohttpsession = ClientSession()
+arq = ARQ("https://thearq.tech", ARQ_API_KEY,aiohttpsession)
 dispatcher = updater.dispatcher
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
