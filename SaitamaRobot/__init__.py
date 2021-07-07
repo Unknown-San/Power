@@ -187,7 +187,7 @@ pbot = Client("KurisuPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.SaitamaRobot
 aiohttpsession = ClientSession()
-arq = ARQ("https://thearq.tech", ARQ_API_KEY,aiohttpsession)
+arq = ARQ("https://thearq.tech", AI_API_KEY,aiohttpsession)
 dispatcher = updater.dispatcher
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
