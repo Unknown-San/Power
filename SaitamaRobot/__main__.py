@@ -223,7 +223,7 @@ def start(update: Update, context: CallbackContext):
         update.effective_message.reply_video(
                 KURISUIMGSTART)
         update.effective_message.reply_text(
-            "Dont Worry I am the Strongest! useing Reversed Cursed Techneque !\n<b>since:</b> <code>{}</code>"
+            "\n<b> Dont Worry I am the Strongest! useing Reversed Cursed Techneque !</b> \n<b>since:</b> <code>{}</code>"
             .format(uptime),
             parse_mode=ParseMode.HTML)
 
