@@ -64,7 +64,7 @@ HELP_STRINGS = """
 *AI Chatbot*, *Anime*, *Music*, *Notes*, *Filters*, *NSFW* *and more!*
 
 🎛 *All commands can either be used with* `/` *or* `!`.
-🎛 *Reach out for support:* @KurisuSupport [.](https://telegra.ph/file/2291942331f135e3292ee.png)
+🎛 *Reach out for support:* @KurisuSupport [.](https://telegra.ph/file/7a642613c8dfc33372e08.mp4)
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
@@ -223,7 +223,7 @@ def start(update: Update, context: CallbackContext):
         update.effective_message.reply_video(
                 KURISUIMGSTART)
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
+            "Dont Worry I am the Strongest! useing Reversed Cursed Techneque !\n<b>since:</b> <code>{}</code>"
             .format(uptime),
             parse_mode=ParseMode.HTML)
 
