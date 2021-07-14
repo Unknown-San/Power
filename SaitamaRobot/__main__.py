@@ -52,11 +52,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Yo! {}, myself {}!* 
-*An Anime themed group management bot from* [Jujitsu;Kaisen](https://anilist.co/anime/9253)!!
+*Eureka! {}, myself {}!* 
+`I'm the strongest there is, after all.`
+*An Anime themed group management bot from* [Jujutsu Kaisen](https://anilist.co/anime/113415/Jujutsu-Kaisen)!!
 
-• *Uptime:* `{}`
-• `{}` *users, across* `{}` *chats.*
 """
 
 HELP_STRINGS = """
@@ -64,7 +63,7 @@ HELP_STRINGS = """
 *AI Chatbot*, *Anime*, *Music*, *Notes*, *Filters*, *NSFW* *and more!*
 
 🎛 *All commands can either be used with* `/` *or* `!`.
-🎛 *Reach out for support:* @KurisuSupport [.](https://telegra.ph/file/7a642613c8dfc33372e08.mp4)
+🎛 *Reach out for support:* @TokyoManjiSupport [.](https://wallpapercave.com/wp/wp9017123.jpg)
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
@@ -195,7 +194,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="🤘🏻 Add Satoru To Your Group",
+                            text="🤘🏻 Add Gojo Satoru To Your Group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
@@ -205,7 +204,7 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🎉 Updates",
-                             url="https://t.me/steinsupdates"),
+                             url="https://t.me/TokyoManjiUpdates"),
                          InlineKeyboardButton(
                              text="🗃 Guide",
                              url="https://t.me/Steinsupdates/7"),
@@ -217,13 +216,13 @@ def start(update: Update, context: CallbackContext):
                              url="https://t.me/ias_chats"),                    
                         InlineKeyboardButton(
                              text="Help & Commands",
-                             url="https://t.me/Kurisu_Makise_Robot?start=help"),      
+                             url="https://t.me/SatorugojoProbot?start=help"),      
                     ]]))
     else:
         update.effective_message.reply_video(
                 KURISUIMGSTART)
         update.effective_message.reply_text(
-            "\n<b> Dont Worry I am the Strongest! useing Reversed Cursed Techneque !</b> \n<b>since:</b> <code>{}</code>"
+            "Don't Worry, I'm the strongest!\n<b>Using Reverse cursed techniques since:</b> <code>{}</code>"
             .format(uptime),
             parse_mode=ParseMode.HTML)
 
@@ -541,7 +540,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now online!](https://telegra.ph/file/26aeb38f38eb8c819e423.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now online!](https://i.imgur.com/jreiXZe.mp4)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
@@ -585,7 +584,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Kurisu Makise is deployed sucessfully...")
+        LOGGER.info("Gojo Satoru is deployed sucessfully...")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
