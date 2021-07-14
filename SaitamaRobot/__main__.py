@@ -52,8 +52,8 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Eureka! {}, myself {}!* 
-*An Anime themed group management bot from* [Steins;Gate](https://anilist.co/anime/9253)!!
+*Yo! {}, myself {}!* 
+*An Anime themed group management bot from* [Jujitsu;Kaisen](https://anilist.co/anime/9253)!!
 
 • *Uptime:* `{}`
 • `{}` *users, across* `{}` *chats.*
@@ -69,8 +69,8 @@ HELP_STRINGS = """
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-KURISU_IMG = "https://telegra.ph/file/6152bf2f73ca8ea30772a.png"
-KURISUIMGSTART = "https://telegra.ph/file/bd01a439fefb53170b36f.gif"
+KURISU_IMG = "https://telegra.ph/file/620abb345b6ec6118fadb.jpg"
+KURISUIMGSTART = "https://telegra.ph/file/7a642613c8dfc33372e08.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer of the Base code, Paul
@@ -195,7 +195,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="➕ Add Kurisu To Your Group",
+                            text="🤘🏻 Add Satoru To Your Group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
