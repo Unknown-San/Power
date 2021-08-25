@@ -2,10 +2,16 @@ future
 emoji
 lxml
 pathlib
+telegraph
+redis
 beautifulsoup4
+search_engine_parser 
+bing_image_downloader
 requests
 sqlalchemy==1.3.20
 python-telegram-bot==12.8
+multicolorcaptcha
+cloudscraper
 psycopg2-binary
 feedparser
 pynewtonmath
