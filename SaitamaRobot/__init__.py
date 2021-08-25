@@ -10,7 +10,8 @@ from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from Python_ARQ import ARQ
 from aiohttp import ClientSession
 StartTime = time.time()
-
+from redis import StrictRedis
+from pyrogram import Client
 # enable logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -72,6 +73,7 @@ if ENV:
     PORT = int(os.environ.get('PORT', 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get('API_ID', None)
+    REDIS_URL = os.environ.get('REDIS_URL', None)
     API_HASH = os.environ.get('API_HASH', None)
     DB_URI = os.environ.get('DATABASE_URL')
     DONATION_LINK = os.environ.get('DONATION_LINK')
@@ -102,6 +104,7 @@ if ENV:
     except ValueError:
         raise Exception(
             "Your blacklisted chats list does not contain valid integers.")
+
 
 else:
     from SaitamaRobot.config import Development as Config
@@ -174,6 +177,15 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
+
+
+REDIS = StrictRedis.from_url(REDIS_URL,decode_responses=True)
+try:
+    REDIS.ping()
+    LOGGER.info("Your redis server is now alive!")
+except BaseException:
+    raise Exception("Your redis server is not alive, please check again.")
+
 
 if not SPAMWATCH_API:
     sw = None
