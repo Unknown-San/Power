@@ -204,10 +204,10 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🎉 Updates",
-                             url="https://t.me/TokyoManjiUpdates"),
+                             url="https://t.me/SatoruUpdates"),
                          InlineKeyboardButton(
                              text="🗃 Guide",
-                             url="https://t.me/Steinsupdates/7"),
+                             url="https://t.me/Satoru updates/4"),
               
                     ],
                      [
