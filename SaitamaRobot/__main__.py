@@ -69,7 +69,7 @@ HELP_STRINGS = """
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 KURISU_IMG = "https://telegra.ph/file/dbe0a31fa8adeb43dcf6b.jpg"
-KURISUIMGSTART = "https://telegra.ph/file/69ad48e5453cbd10e7ff5.jpg"
+KURISUIMGSTART = "https://telegra.ph/file/543ec9a150fd86d5db2b5.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer of the Base code, Paul
@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
                      [
                         InlineKeyboardButton(
                              text="Anime Chat",
-                             url="https://t.me/ias_chats"),                    
+                             url="https://t.me/Otaku_Stan"),                    
                         InlineKeyboardButton(
                              text="Help & Commands",
                              url="https://t.me/PowerDevilHunterbot?start=help"),      
