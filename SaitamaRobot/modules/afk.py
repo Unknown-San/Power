@@ -1,3 +1,5 @@
+"""AFK"""
+
 import random, html
 
 from SaitamaRobot import dispatcher
